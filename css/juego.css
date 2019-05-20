@@ -1,11 +1,23 @@
 /*Código armado por La Foca Loca S.A. No modificar*/
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'glyphiconsRegular';
   width: 940px;
   margin: 5% auto;
   min-height: 100%;
-  background-image: url(../images/adventure.jpg);
+  background-image: url(../images/pokemon.jpg);
 }
+
+@font-face{
+  font-family: 'glyphiconsRegular';
+  src: url(./fonts/glyphicons-halflings-regular.ttf) format("truetype"),
+  url(./fonts/glyphicons-halflings-regular.eot),
+  url(./fonts/glyphicons-halflings-regular.woff) format("woff"),
+  url(./fonts/glyphicons-halflings-regular.svg) format("svg"),
+  url(./fonts/glyphicons-halflings-regular.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 ul {
   padding-left: 0;
   list-style: none;
@@ -16,12 +28,12 @@ li {
 }
 li::before {
   content: "• ";
-  color: #EC6778;
+  color: #3D7DCA;
 }
 
 .col-40 h1 {
   font-size: 20px;
-  color: #E84A5F;
+  color: #3D7DCA;
 }
 
 .col-40, .col-60 {
@@ -30,14 +42,14 @@ li::before {
   vertical-align: top;
 }
 .col-40 {
-  background: #54A8C8;
+  background:	#3D7DCA;
   padding: 30px;
-  color: #000;
+  color: #003A70;
   width: 40%;
 }
 
 .col-60 {
-  background: #E02B4F;
+  background: #003A70;
   width: 60%;
 
 }
@@ -48,6 +60,15 @@ li::before {
 
 .texto-centrado {
   text-align: center;
+  font-size: 24px;
+}
+
+.subtittle{
+  text-align: left;
+  font-size: 18px;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 3px solid #FFCB05;
 }
 
 #juego div {
@@ -76,4 +97,10 @@ li::before {
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
+}
+
+img.pikachu{
+  width: 40%;
+  height: 40%;
+  margin-left: 25%;
 }
