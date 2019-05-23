@@ -1,5 +1,5 @@
 // Arreglo que contiene las intrucciones del juego 
-var instrucciones = [];
+var instrucciones = ["Armá el rompecabezas!", "Siempre vas a tener un espacio libre para mover las piezas", "Podrás mover de a una pieza por vez", "Acomodá las piezas para armar el dibujo objetivo"];
 // Arreglo para ir guardando los movimientos que se vayan realizando
 var movimientos = [];
 
@@ -22,20 +22,47 @@ Para eso deberás usar la función ya implementada mostrarInstruccionEnLista().
 Podés ver su implementación en la ultima parte de este codigo. */
 function mostrarInstrucciones(instrucciones) {
     //COMPLETAR
+  for (i = 0; i < instrucciones.length; i++){
+    mostrarInstruccionEnLista(instrucciones[i], "lista-instrucciones");
+  }
 }
 
 /* COMPLETAR: Crear función que agregue la última dirección al arreglo de movimientos
 y utilice actualizarUltimoMovimiento para mostrarlo en pantalla */
+function agregarDireccionAlArrayMovimientos (direccion){
+  movimientos.push(direccion);
+  actualizarUltimoMovimiento(direccion);
+}
 
 /* Esta función va a chequear si el Rompecabezas esta en la posicion ganadora. 
 Existen diferentes formas de hacer este chequeo a partir de la grilla. */
 function chequearSiGano() {
     //COMPLETAR
+  var grillaGanadora = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+  ];
+  for (i=0; i < grilla.length ; i++) {
+    for (j=0; j < grilla.length ; j++) {
+      if (grilla[i][j] === grillaGanadora[i][j]){
+        var contador = 0;
+        contador += 1;
+      }
+    }
+  }
+  if(contador == 9){
+    mostrarCartelGanador();
+    return true;
+  }else{
+    return false;
+  }
 }
 
 // Implementar alguna forma de mostrar un cartel que avise que ganaste el juego
 function mostrarCartelGanador() {
     //COMPLETAR
+  alert ("ganaste");
 }
 
 /* Función que intercambia dos posiciones en la grilla.
