@@ -41,8 +41,9 @@ function chequearSiGano() {
   var grillaGanadora = [
     [1, 2, 3],
     [4, 5, 6],
-    [7, 8, 8]
+    [7, 8, 9]
   ];
+
   var contador = 0;
   for (i=0; i < grilla.length ; i++) {
     for (j=0; j < grilla[i].length ; j++) {
@@ -147,7 +148,7 @@ function moverEnDireccion(direccion) {
         actualizarPosicionVacia(nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
 
   //COMPLETAR: Agregar la dirección del movimiento al arreglo de movimientos
-        actualizarUltimoMovimiento();
+        agregarDireccionAlArrayMovimientos(direccion);
 
     }
 }
